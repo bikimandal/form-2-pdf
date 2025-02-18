@@ -26,12 +26,12 @@ const Output: React.FC = () => {
 
     const element = document.getElementById("pdf-content");
     const options = {
-      margin: 1, // Increased margin
+      margin: 1,
       filename: "submitted_information.pdf",
       html2canvas: {
         scale: 2,
-        width: 800, // Explicitly set width
-        windowWidth: 800, // Match windowWidth
+        width: 800,
+        windowWidth: 800,
         useCORS: true,
         logging: true,
         letterRendering: true,
@@ -57,10 +57,8 @@ const Output: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-lg border border-gray-300">
-        {/* PDF Content Container */}
         <div id="pdf-content" className="bg-white pb-8">
           {" "}
-          {/* Added bottom padding */}
           <h3 className="text-4xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-300 pb-4">
             ID Card
           </h3>
@@ -101,13 +99,10 @@ const Output: React.FC = () => {
               </p>
             </div>
           </div>
-          {/* Footer with adjusted spacing */}
           <div className="mt-12 pt-4 text-center text-gray-600 border-t border-gray-300">
             <p className="text-sm mb-4">&copy; 2024 All Rights Reserved</p>
           </div>
         </div>
-
-        {/* Download button - only visible on webpage */}
         <div className="mt-8 text-center">
           <button
             id="download-btn"

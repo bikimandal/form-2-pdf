@@ -7,7 +7,7 @@ import {
   FaRegFileImage,
   FaRegAddressBook,
 } from "react-icons/fa";
-import { AiOutlineCloseCircle } from "react-icons/ai"; // Cross button icon
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const Form: React.FC = () => {
   const [name, setName] = useState("");
@@ -49,7 +49,6 @@ const Form: React.FC = () => {
           User Information Form
         </h2>
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name */}
           <div>
             <label className="text-lg mb-2 text-gray-700 flex items-center space-x-2">
               <FaUserAlt className="text-gray-600" />
@@ -64,8 +63,6 @@ const Form: React.FC = () => {
               required
             />
           </div>
-
-          {/* Class */}
           <div>
             <label className="text-lg mb-2 text-gray-700 flex items-center space-x-2">
               <FaRegAddressBook className="text-gray-600" />
@@ -80,8 +77,6 @@ const Form: React.FC = () => {
               required
             />
           </div>
-
-          {/* Roll Number */}
           <div>
             <label className="text-lg mb-2 text-gray-700 flex items-center space-x-2">
               <FaRegAddressBook className="text-gray-600" />
@@ -96,8 +91,6 @@ const Form: React.FC = () => {
               required
             />
           </div>
-
-          {/* Contact Number */}
           <div>
             <label className="text-lg mb-2 text-gray-700 flex items-center space-x-2">
               <FaPhoneAlt className="text-gray-600" />
@@ -112,8 +105,6 @@ const Form: React.FC = () => {
               required
             />
           </div>
-
-          {/* Profile Picture */}
           <div>
             <label className="text-lg mb-2 text-gray-700 flex items-center space-x-2">
               <FaRegFileImage className="text-gray-600" />
@@ -133,8 +124,6 @@ const Form: React.FC = () => {
               <FiUpload className="w-5 h-5" />
               Upload Profile Picture
             </label>
-
-            {/* Uploaded Image Preview with Remove Option */}
             {profilePicture && (
               <div className="relative mt-4 inline-block group">
                 <img
@@ -142,7 +131,6 @@ const Form: React.FC = () => {
                   alt="Profile Preview"
                   className="w-32 h-32 object-cover rounded-full border-2 border-gray-300 transition-transform transform hover:scale-105"
                 />
-                {/* Remove Button */}
                 <button
                   type="button"
                   onClick={removeProfilePicture}
@@ -153,11 +141,7 @@ const Form: React.FC = () => {
               </div>
             )}
           </div>
-
-          {/* Error Message */}
           {error && <p className="text-red-500 text-center">{error}</p>}
-
-          {/* Submit Button */}
           <div>
             <button
               type="submit"
